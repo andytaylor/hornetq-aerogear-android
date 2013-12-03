@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements MessageHandler {
 	        @Override
 	        public void onFailure(Exception exception) 
 	        {
-	        	Toast.makeText(MainActivity.this, "Unable to contact AeroGear. \nPlease update your AeroGear settings", // 3
+	        	Toast.makeText(MainActivity.this, "Unable to register device as a message recipient.\nPlease update your AeroGear settings", // 3
 	                    Toast.LENGTH_LONG).show();
 	        	Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
 	        	startActivity(intent);
