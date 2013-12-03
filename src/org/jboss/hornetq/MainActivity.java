@@ -28,8 +28,21 @@ public class MainActivity extends Activity implements MessageHandler {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_main);
 	    registerWithGCM();
+
     }
-	
+
+	private boolean validateSettings()
+	{
+    	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Registrations registrations = new Registrations();
+
+		return prefs.contains(getString(R.string.pref_aerogear_unified_push_url)) &&
+			   prefs.contains(getString(R.string.pref_aerogear_varient_id)) &&
+			   prefs.contains(getString(R.string.pref_aerogear_varient_secret)) &&
+			   prefs.contains(getString(R.string.pref_gcm_sender_id)) &&
+			   prefs.contains(getString(R.string.pref_alias));
+	}
+
     private void registerWithGCM()
     {
 	    // access the registration object
@@ -51,12 +64,10 @@ public class MainActivity extends Activity implements MessageHandler {
 	        @Override
 	        public void onFailure(Exception exception) 
 	        {
-		    	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-		    	builder.setTitle("Error during registration")
-		    		   .setMessage("Please check your AeroGear Settings");
-		    	AlertDialog dialog = builder.create();
-		    	dialog.show();
-		    	Log.e("GCMRegistration", exception.getStackTrace().toString());
+	        	Toast.makeText(MainActivity.this, "Unable to contact AeroGear. \nPlease update your AeroGear settings", // 3
+	                    Toast.LENGTH_LONG).show();
+	        	Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+	        	startActivity(intent);
 	        }
 	    });
     }
