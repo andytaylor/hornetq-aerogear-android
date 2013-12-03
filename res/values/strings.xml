@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HornetQ AeroGear</string>
+    <string name="action_settings">Settings</string>
+ 
+    <!--  Preference Settings -->
+    <string name="aerogear_unified_push_url">AeroGear Unified Push URL</string>
+    <string name="aerogear_unified_push_url_summary">The URL to the AeroGear Unified Push Service.</string>
+    <string name="pref_aerogear_unified_push_url">pref_aerogear_unified_push_url</string>
+
+    <string name="aerogear_varient_id">AeroGear Varient ID</string>
+    <string name="aerogear_varient_id_summary">The ID of the Android varient registered with AeroGear Unified Push Service.</string>
+    <string name="pref_aerogear_varient_id">pref_aerogear_varient_id</string>
+
+    <string name="aerogear_varient_secret">AeroGear Varient Secret</string>
+    <string name="aerogear_varient_secret_summary">The Secret of the Android varient registered with AeroGear Unified Push Service.</string>
+    <string name="pref_aerogear_varient_secret">pref_aerogear_varient_secret</string>
+
+    <string name="gcm_sender_id">GCM Sender ID</string>
+    <string name="gcm_sender_id_summary">The project number of your application as registered with Google Cloud Messaging.</string>
+    <string name="pref_gcm_sender_id">gcm_sender_id</string>
+
+    <string name="alias">Alias</string>
+    <string name="alias_summary">A user alias used to target messages specifically to you.  This can be any string such as name or email address.</string>
+    <string name="pref_alias">pref_alias</string>
+
+</resources>

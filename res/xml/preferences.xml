@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:summary="@string/aerogear_unified_push_url_summary"
+        android:title="@string/aerogear_unified_push_url"
+        android:key="@string/pref_aerogear_unified_push_url" />
+
+    <EditTextPreference
+        android:summary="@string/aerogear_varient_id_summary"
+        android:title="@string/aerogear_varient_id"
+        android:key="@string/pref_aerogear_varient_id" />
+
+    <EditTextPreference
+        android:summary="@string/aerogear_varient_secret_summary"
+        android:title="@string/aerogear_varient_secret"
+        android:key="@string/pref_aerogear_varient_secret" />
+
+    <EditTextPreference
+        android:summary="@string/gcm_sender_id_summary"
+        android:title="@string/gcm_sender_id"
+        android:key="@string/pref_gcm_sender_id" />
+
+    <EditTextPreference
+        android:summary="@string/alias_summary"
+        android:title="@string/alias"
+        android:key="@string/pref_alias" />
+
+</PreferenceScreen>
