@@ -31,18 +31,6 @@ public class MainActivity extends Activity implements MessageHandler {
 
     }
 
-	private boolean validateSettings()
-	{
-    	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        Registrations registrations = new Registrations();
-
-		return prefs.contains(getString(R.string.pref_aerogear_unified_push_url)) &&
-			   prefs.contains(getString(R.string.pref_aerogear_varient_id)) &&
-			   prefs.contains(getString(R.string.pref_aerogear_varient_secret)) &&
-			   prefs.contains(getString(R.string.pref_gcm_sender_id)) &&
-			   prefs.contains(getString(R.string.pref_alias));
-	}
-
     private void registerWithGCM()
     {
 	    // access the registration object
